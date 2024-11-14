@@ -8,10 +8,10 @@ public class Drink extends Order {
     public void setDrink(DrinkSize drink) {
         this.drink = drink;
     }
-
-    public DrinkSize getDrink() {
-        return drink;
-    }
+//
+//    public DrinkSize getDrink() {
+//        return drink;
+//    }
 
     public double getDrinkPrice() {
         double total = drink.getPrice();

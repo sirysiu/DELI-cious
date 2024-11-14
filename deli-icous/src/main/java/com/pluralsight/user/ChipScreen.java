@@ -12,10 +12,9 @@ import java.util.Scanner;
 public class ChipScreen {
 
     static List<Chips> chips = new ArrayList<>();
-    private Order order;
+
 
     public ChipScreen(Order order) {
-        this.order = order;
             Scanner scanner = new Scanner(System.in);
             Chips crisp = new Chips();
 
@@ -23,6 +22,11 @@ public class ChipScreen {
             ChipsType chip = ChipsType.valueOf(scanner.nextLine().toUpperCase());
             crisp.setChips(chip);
 
-            chips.add(crisp);
+
+
+           order.setChips(crisp);
+        // chips.add(crisp);
+       // order.setSandwich(sandwichOrder); // Add the sandwich to the order
+
     }
 }

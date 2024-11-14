@@ -16,11 +16,14 @@ public class DrinkScreen {
         Drink soda = new Drink();
 
 
-        System.out.println("What size drink would you like? ");
+        System.out.println("What size drink would you like? SMALL MEDIUM LARGE");
         DrinkSize d = DrinkSize.valueOf(scanner.nextLine().toUpperCase());
         soda.setDrink(d);
 
-        drink.add(soda);
+      //  drink.add(soda);
+
+        order.setDrink(soda);
+        //order.setSandwich(sandwichOrder); // Add the sandwich to the order
 
 
     }

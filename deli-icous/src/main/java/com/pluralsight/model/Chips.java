@@ -2,10 +2,10 @@ package com.pluralsight.model;
 
 import com.pluralsight.model.enums.ChipsType;
 
-public class Chips {
+public class Chips extends Order {
     ChipsType chips;
 
-    public ChipsType getChips() {
+    public ChipsType getChipsType() {
         return chips;
     }
 

@@ -50,6 +50,8 @@ public class OrderScreen {
                 System.out.println("Order Cancelled...");
                 isRunning = false;
                 break;
+            default:
+                System.out.println("Please enter the number above");
         }
 
         }

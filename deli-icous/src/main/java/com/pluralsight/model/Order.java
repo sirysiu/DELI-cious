@@ -3,13 +3,31 @@ package com.pluralsight.model;
 import com.pluralsight.model.enums.ChipsType;
 import com.pluralsight.model.enums.DrinkSize;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Order {
-    //  private List<Product> products;
     private Sandwich sandwich;
     private Drink drink;
     private Chips chips;
+    private DrinkSize drinkSize;
+   // private ChipsType chipsType;
 
-    public void setChips(Chips chips) {
+
+
+
+
+
+    public Chips getChips() {
+        return chips;
+    }
+
+    public Drink getDrink() {
+        return drink;
+    }
+
+
+    public void setChips(Chips crisp) {
         this.chips = chips;
     }
 
@@ -21,23 +39,12 @@ public class Order {
         this.drinkSize = drinkSize;
     }
 
-    private DrinkSize drinkSize;
 
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
 
-    public void setOrderNumber(String orderNumber) {
-        this.orderNumber = orderNumber;
-    }
 
-    private ChipsType chipsType;
-    private String customerName;
-    private String orderNumber;
-
-    public void setChipsType(ChipsType chipsType) {
-        this.chipsType = chipsType;
-    }
+//    public void setChipsType(ChipsType chipsType) {
+//        this.chipsType = chipsType;
+//    }
 
     public void setSandwich(Sandwich sandwich) {
         this.sandwich = sandwich;
@@ -46,9 +53,8 @@ public class Order {
     public Order() {
         this.sandwich = sandwich;
         this.drinkSize = drinkSize;
-        this.chipsType = chipsType;
-        this.customerName = customerName;
-        this.orderNumber = orderNumber;
+      //  this.chipsType = chipsType;
+       // this.chips = new ArrayList<>();
     }
 
     // Method to calculate total price of the order
@@ -67,8 +73,8 @@ public class Order {
         }
 
         // Add the price of chips
-        if (chipsType != null) {
-            total += chipsType.getPrice();
+        if (chips != null) {
+            total += chips.getChipsPrice();
         }
 
         return total;
@@ -82,39 +88,10 @@ public class Order {
         return drinkSize;
     }
 
-    public ChipsType getChipsType() {
-        return chipsType;
-    }
 
 
 
-//    public List<Product> getProducts() {
-//        return products;
-//    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public String getOrderNumber() {
-        return orderNumber;
-    }
 
 
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "sandwich=" + sandwich +
-                ", drinkSize=" + drinkSize +
-                ", chipsType=" + chipsType +
-                ", customerName='" + customerName + '\'' +
-                ", orderNumber='" + orderNumber + '\'' +
-                '}';
-    }
-//    public Order(List<Product> products, String customerName, String orderNumber) {
-//        this.products = products;
-//        this.customerName = customerName;
-//        this.orderNumber = orderNumber;
-//    }
 }

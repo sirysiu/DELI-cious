@@ -11,38 +11,39 @@ public class Checkout {
 
   public Checkout(Order order) {
      this.order = order;
-  SandwichCheckout();
-    DrinkCheckout();
-   ChipsCheckout();
+ // SandwichCheckout();
+//    DrinkCheckout();
+//   ChipsCheckout();
       ReceiptGenerator.generateReceipt(order);
 
   }
 
-  private void ChipsCheckout() {
-      for (Chips c : ChipScreen.chips){
-          System.out.println("Chips is: " + c.getChipsPrice());
-      }
-  }
-  private void DrinkCheckout() {
-    for (Drink d : DrinkScreen.drink) {
-        System.out.println("Your Drink: " + d.getDrinkPrice());
-    }
-  }
+//  private void ChipsCheckout() {
+//      for (Chips c : ChipScreen.chips){
+//          System.out.println("Chips is: " + c.getChipsPrice());
+//      }
+//  }
+//  private void DrinkCheckout() {
+//    for (Drink d : DrinkScreen.drink) {
+//        System.out.println("Your Drink: " + d.getDrinkPrice());
+//    }
+//  }
 
-  private void SandwichCheckout() {
-    for (Sandwich sandwich : SandwichScreen.sandwichOrderList) {
+//  private void SandwichCheckout() {
+//    for (Sandwich sandwich : SandwichScreen.sandwichOrderList) {
+//
+//      System.out.println("********ORDER SUMMARY************");
+//      System.out.println("Sandwich: ");
+//      System.out.println("Bread: " + sandwich.getBread());
+//      System.out.println("Size: " + sandwich.getSize());
+//      System.out.println("Meats: " + sandwich.getMeats());
+//      System.out.println("Cheeses: " + sandwich.getCheeses());
+//      System.out.println("Toppings: " + sandwich.getToppings());
+//      System.out.println("Sauces: " + sandwich.getSauces());
+//      System.out.println("Toasted: " + (sandwich.isToasted() ? "Yes" : "No"));
+//
+//      System.out.println("Total Price: " + sandwich.getTotalPriceSandwich());
+//    }
+//  }
 
-      System.out.println("********ORDER SUMMARY************");
-      System.out.println("Sandwich: ");
-      System.out.println("Bread: " + sandwich.getBread());
-      System.out.println("Size: " + sandwich.getSize());
-      System.out.println("Meats: " + sandwich.getMeats());
-      System.out.println("Cheeses: " + sandwich.getCheeses());
-      System.out.println("Toppings: " + sandwich.getToppings());
-      System.out.println("Sauces: " + sandwich.getSauces());
-      System.out.println("Toasted: " + (sandwich.isToasted() ? "Yes" : "No"));
-
-      System.out.println("Total Price: " + sandwich.getTotalPriceSandwich());
-    }
-  }
 }
