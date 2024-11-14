@@ -17,5 +17,7 @@ public enum Meat {
     public double getPrice() {
         return price;
     }
+
+
 }
 

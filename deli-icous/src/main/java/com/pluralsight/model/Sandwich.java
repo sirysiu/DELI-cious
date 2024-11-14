@@ -2,24 +2,84 @@ package com.pluralsight.model;
 
 import com.pluralsight.model.enums.*;
 
-public class Sandwich extends Product{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Sandwich extends Order {
     SandwichSize size;
-     Toppings toppings;
-     BreadType bread;
-    Meat meats;
-    Cheese cheese;
+    List<Toppings> toppings;
+    BreadType bread;
+    List<Meat> meats;
+    List<Cheese> cheeses;
+    List<Sauces> sauces;
     boolean isToasted;
 
+    public List<Sauces> getSauces() {
+        return sauces;
+    }
+
+    public void setToasted(boolean toasted) {
+        isToasted = toasted;
+    }
+
+    public Sandwich() {
+        super();
+        // Initialize the lists
+        this.meats = new ArrayList<>();
+        this.cheeses = new ArrayList<>();
+        this.toppings = new ArrayList<>();  // Initialize toppings list
+        this.sauces = new ArrayList<>();
+        this.isToasted = false;
+    }
+
+    public double getTotalPriceSandwich() {
+        double total = size.getPrice();
+
+        for (Meat meat : meats) {
+            total += meat.getPrice();
+        }
+
+        for (Cheese cheese : cheeses) {
+            total += cheese.getPrice();
+        }
+
+        return total;
+    }
+
+    public void setSauces(List<Sauces> sauces) {
+        this.sauces = sauces;
+    }
+
+    public boolean isToasted() {
+        return isToasted;  // Get the toasted state
+    }
+    public void setSize(SandwichSize size) {
+        this.size = size;
+    }
+
+    public void setToppings(List<Toppings> toppings) {
+        this.toppings = toppings;
+    }
+
+    public void setBread(BreadType bread) {
+        this.bread = bread;
+    }
+
+    public void addMeat(Meat meat) {
+       this.meats.add(meat);
+    }
+
+    public void addCheese(Cheese cheese) {
+        cheeses.add(cheese);
+    }
 
     public SandwichSize getSize() {
         return size;
     }
 
-    public boolean isToasted() {
-        return isToasted;
-    }
 
-    public Toppings getToppings() {
+
+    public List<Toppings> getToppings() {
         return toppings;
     }
 
@@ -27,31 +87,14 @@ public class Sandwich extends Product{
         return bread;
     }
 
-    public Meat getMeats() {
+    public List<Meat> getMeats() {
         return meats;
     }
 
-    public Cheese getCheese() {
-        return cheese;
+    public List<Cheese> getCheeses() {
+        return cheeses;
     }
 
-    public Sandwich(String name, double price, SandwichSize size, Toppings toppings, BreadType bread, Meat meats, Cheese cheese, boolean isToasted) {
-        super(name, price);
-        this.size = size;
-        this.toppings = toppings;
-        this.bread = bread;
-        this.meats = meats;
-        this.cheese = cheese;
-        this.isToasted = isToasted;
-
-        if (size == SandwichSize.SMALL) {
-            this.price = 5.50;
-        } else if(size == SandwichSize.MEDIUM) {
-            this.price = 7.00;
-        } else if(size == SandwichSize.LARGE) {
-            this.price = 8.50;
-        }
-    }
 
     @Override
     public String toString() {
@@ -59,7 +102,7 @@ public class Sandwich extends Product{
                 "on " + bread +
                         " with " + toppings +
                 " " + meats +
-                " " + cheese +
+                " " + cheeses +
                         " and " + isToasted
                 ;
     }

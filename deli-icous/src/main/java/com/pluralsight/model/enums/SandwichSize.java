@@ -1,9 +1,9 @@
 package com.pluralsight.model.enums;
 
 public enum SandwichSize {
-    SMALL(4),
-    MEDIUM(8),
-    LARGE(12);
+    SMALL(4.00),
+    MEDIUM(8.00),
+    LARGE(12.00);
 
     private final double price;
 
