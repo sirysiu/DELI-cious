@@ -1,7 +1,27 @@
 package com.pluralsight.user;
 
+import com.pluralsight.model.Drink;
+import com.pluralsight.model.Order;
+import com.pluralsight.model.enums.DrinkSize;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class DrinkScreen {
-    public DrinkScreen() {
+     static List<Drink> drink = new ArrayList<>();
+
+    public DrinkScreen(Order order) {
+        Scanner scanner = new Scanner(System.in);
+        Drink soda = new Drink();
+
+
+        System.out.println("What size drink would you like? ");
+        DrinkSize d = DrinkSize.valueOf(scanner.nextLine().toUpperCase());
+        soda.setDrink(d);
+
+        drink.add(soda);
+
 
     }
 }

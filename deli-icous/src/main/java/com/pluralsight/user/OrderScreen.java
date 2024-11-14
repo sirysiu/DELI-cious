@@ -1,9 +1,17 @@
 package com.pluralsight.user;
 
+import com.pluralsight.model.Order;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class OrderScreen {
+    public static List<Order> orders = new ArrayList<>();
+    private Order order;
+
     public OrderScreen() {
+        order = new Order();
         boolean isRunning = true;
         while (isRunning) {
             System.out.println("""
@@ -25,17 +33,18 @@ public class OrderScreen {
 
         switch (input) {
             case 1:
-                new SandwichScreen();
+                new SandwichScreen(order);
                 break;
             case 2:
-                new DrinkScreen();
+                new DrinkScreen(order);
                 break;
             case 3:
-                new ChipScreen();
+                new ChipScreen(order);
                 break;
             case 4:
                 System.out.println("Checking out.. ");
-                isRunning = false;
+               isRunning = false;
+               new Checkout(order);
                 break;
             case 0:
                 System.out.println("Order Cancelled...");
