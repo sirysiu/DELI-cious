@@ -27,7 +27,7 @@ public class Order {
     }
 
 
-    public void setChips(Chips crisp) {
+    public void setChips(Chips chips) {
         this.chips = chips;
     }
 
