@@ -1,6 +1,0 @@
-********** RECEIPT **********
-Order Date: Thu Nov 14 01:23:50 EST 2024
-
-Chip Price: $1.50
-
-********** TOTAL PRICE **********

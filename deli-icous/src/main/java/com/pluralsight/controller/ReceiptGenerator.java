@@ -72,7 +72,7 @@ public class ReceiptGenerator {
             }
             Drink drink = order.getDrink();
             if (drink != null) {
-                writer.write("Drink Price: $" + String.format("%.2f", drink.getDrinkPrice()) + "\n\n");
+                writer.write("Drink Price: $" + String.format("%.2f", drink.getDrinkPrice()) + "\n");
 
             }
 
@@ -93,10 +93,9 @@ public class ReceiptGenerator {
 //                writer.write("\n");
 //            }
 
-
-            //double totalPrice = calculateTotalPrice(order);
+            double totalPrice = calculateTotalPrice(order);
             writer.write("********** TOTAL PRICE **********\n");
-        //   writer.write("Total: " + totalPrice + "\n");
+        writer.write("Total: " + totalPrice + "\n");
 
 
 
@@ -105,17 +104,24 @@ public class ReceiptGenerator {
         }
     }
 //
-//    private static double calculateTotalPrice(Order order) {
-//        double total = 0.0;
-//
-//        for (Sandwich sandwich : order.getSandwich()) {
-//            total += sandwich.getOrderTotalPrice();
-//        }
-//
-//        for (Drink drink : order.getDrinkSize()) {
-//
-//        }
-//        return total;
-//
-//    }
+    private static double calculateTotalPrice(Order order) {
+        double total = 0.0;
+
+      Sandwich sandwich = order.getSandwich();
+      if(sandwich !=null) {
+          total += sandwich.getTotalPriceSandwich();
+      }
+
+        Drink drink = order.getDrink();
+      if(drink != null){
+          total += drink.getDrinkPrice();
+      }
+
+      Chips chips = order.getChips();
+      if (chips != null) {
+          total += chips.getChipsPrice();
+      }
+        return total;
+
+    }
 }

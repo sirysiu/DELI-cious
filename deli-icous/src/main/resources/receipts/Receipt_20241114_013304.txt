@@ -1,0 +1,17 @@
+********** RECEIPT **********
+Order Date: Thu Nov 14 01:33:04 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: STEAK
+Cheeses: AMERICAN
+Toppings: None
+Sauces: None
+Toasted: Yes
+Sandwich Price: $5.75
+Drink Price: $3.00
+Chip Price: $1.50
+
+********** TOTAL PRICE **********
+Total: 10.25
