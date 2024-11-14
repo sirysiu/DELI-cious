@@ -21,9 +21,12 @@ public class ChipScreen {
 
             System.out.println("What Chips would you like?");
         System.out.println(" (Lays, Doritos, Pringles) ");
+        try {
             ChipsType chip = ChipsType.valueOf(scanner.nextLine().toUpperCase());
             crisp.setChips(chip);
-
+        } catch (IllegalArgumentException e) {
+            System.out.println("\nInvalid sauce selection. Please try again.");
+        }
 
 
            order.setChips(crisp);

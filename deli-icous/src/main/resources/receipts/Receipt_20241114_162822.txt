@@ -1,0 +1,17 @@
+********** RECEIPT **********
+Receipt ID: REC-20241114_162822
+Order Date: Thu Nov 14 16:28:22 EST 2024
+
+Sandwich:
+Size: LARGE
+Bread: WHITE
+Meats: STEAK
+Cheeses: 
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $11.50
+Drink Size: LARGE
+Drink Price: $3.00
+********** TOTAL PRICE **********
+Total: 14.5

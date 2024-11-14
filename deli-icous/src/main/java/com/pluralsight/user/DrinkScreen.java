@@ -18,9 +18,12 @@ public class DrinkScreen {
 
         System.out.println("What size drink would you like? ");
         System.out.println("(SMALL MEDIUM LARGE)");
-        DrinkSize d = DrinkSize.valueOf(scanner.nextLine().toUpperCase());
-        soda.setDrink(d);
-
+        try {
+            DrinkSize d = DrinkSize.valueOf(scanner.nextLine().toUpperCase());
+            soda.setDrink(d);
+        } catch (IllegalArgumentException e) {
+            System.out.println("\nInvalid sauce selection. Please try again.");
+        }
         order.setDrink(soda);
 
         System.out.println("\nYou have selected a Drink...\n");

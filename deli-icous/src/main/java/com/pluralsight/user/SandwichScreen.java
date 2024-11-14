@@ -19,42 +19,67 @@ public class SandwichScreen {
 
         System.out.println("What size Sandwich would you like?");
         System.out.println("(SMALL, MEDIUM, LARGE)");
-        SandwichSize size = SandwichSize.valueOf(scanner.nextLine().toUpperCase());
-        sandwichOrder.setSize(size);
+        try {
+            SandwichSize size = SandwichSize.valueOf(scanner.nextLine().toUpperCase());
+            sandwichOrder.setSize(size);
+        } catch (IllegalArgumentException e) {
+            System.out.println("\nInvalid sauce selection. Please try again.");
+        }
 
         System.out.println("\nWhat kind of bread would you like? ");
         System.out.println("(WHITE, WHEAT, RYE, WRAP) ");
-        BreadType breadInput = BreadType.valueOf(scanner.nextLine().toUpperCase());
-        sandwichOrder.setBread(breadInput);
+        try {
+            BreadType breadInput = BreadType.valueOf(scanner.nextLine().toUpperCase());
+            sandwichOrder.setBread(breadInput);
+        } catch (IllegalArgumentException e) {
+            System.out.println("\nInvalid sauce selection. Please try again.");
+        }
 
         System.out.println("\nSelect meats (STEAK, HAM, SALAMI, ROAST_BEEF, CHICKEN, BACON). Type 'done' to stop adding.");
         while (true) {
             String meatChoice = scanner.nextLine().toUpperCase();
             if (meatChoice.equals("DONE")) break;
-            Meat meat = Meat.valueOf(meatChoice);
-            sandwichOrder.addMeat(meat);
+            try {
+                Meat meat = Meat.valueOf(meatChoice);
+                sandwichOrder.addMeat(meat);
+            } catch (IllegalArgumentException e) {
+                System.out.println("\nInvalid meat selection. Please try again.");
+            }
         }
 
         System.out.println("\nSelect cheese (AMERICAN, PROVOLONE, CHEDDAR, SWISS). Type 'done' to stop adding.");
         while (true) {
             String cheeseChoice = scanner.nextLine().toUpperCase();
             if (cheeseChoice.equals("DONE")) break;
-            Cheese cheese = Cheese.valueOf(cheeseChoice);
-            sandwichOrder.addCheese(cheese);
+            try {
+                Cheese cheese = Cheese.valueOf(cheeseChoice);
+                sandwichOrder.addCheese(cheese);
+            } catch (IllegalArgumentException e) {
+                System.out.println("\nInvalid cheese selection. Please try again.");
+            }
         }
         System.out.println("\nSelect toppings (LETTUCE, PEPPERS, ONIONS, TOMATOES, JALAPENOS, CUCUMBERS, PICKLES, GUACAMOLE, MUSHROOMS). Type 'done' to stop adding.");
         while (true) {
             String toppingChoice = scanner.nextLine().toUpperCase();
             if (toppingChoice.equals("DONE")) break;
-            Toppings topping = Toppings.valueOf(toppingChoice);
-            sandwichOrder.setToppings(Collections.singletonList(topping));
+            try {
+                Toppings topping = Toppings.valueOf(toppingChoice);
+                sandwichOrder.getToppings().add(topping);  // Add topping to list
+            } catch (IllegalArgumentException e) {
+                System.out.println("\nInvalid topping selection. Please try again.");
+            }
+
         }
         System.out.println("\nSelect sauces (MAYO, MUSTARD, KETCHUP, RANCH, THOUSAND_ISLANDS, VINAIGRETTE). Type 'done' to stop adding.");
         while (true) {
             String sauceChoice = scanner.nextLine().toUpperCase();
             if (sauceChoice.equals("DONE")) break;
-            Sauces sauces = Sauces.valueOf(sauceChoice);
-            sandwichOrder.setSauces(Collections.singletonList(sauces));
+            try {
+                Sauces sauce = Sauces.valueOf(sauceChoice);
+                sandwichOrder.getSauces().add(sauce);  // Add sauce to list
+            } catch (IllegalArgumentException e) {
+                System.out.println("\nInvalid sauce selection. Please try again.");
+            }
         }
 
         System.out.println("\nWould you like it toasted? (yes/no) ");
@@ -63,7 +88,6 @@ public class SandwichScreen {
         if (response.equalsIgnoreCase("yes")) {
             sandwichOrder.setToasted(true);
         }
-
 
 
         order.setSandwich(sandwichOrder); // Add the sandwich to the order
