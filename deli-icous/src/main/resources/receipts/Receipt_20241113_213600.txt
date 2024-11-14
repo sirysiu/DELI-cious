@@ -1,0 +1,11 @@
+********** RECEIPT **********
+Order Date: Wed Nov 13 21:36:00 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: STEAKnCheeses: 
+Toppings: None
+Sauces: MAYO
+Toasted: Yes
+Total Price: $5.00
