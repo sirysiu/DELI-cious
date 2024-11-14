@@ -1,0 +1,20 @@
+********** RECEIPT **********
+Receipt ID: REC-20241114_115451
+Order Date: Thu Nov 14 11:54:51 EST 2024
+
+Sandwich:
+Size: LARGE
+Bread: RYE
+Meats: HAM, BACON, CHICKEN
+Cheeses: AMERICAN
+Toppings: PICKLES
+Sauces: MAYO
+Toasted: Yes
+Sandwich Price: $15.75
+Drink Size: LARGE
+Drink Price: $3.00
+Chip Type: LAYS
+Chip Price: $1.50
+
+********** TOTAL PRICE **********
+Total: 20.25

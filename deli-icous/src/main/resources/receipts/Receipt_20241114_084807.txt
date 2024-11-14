@@ -1,7 +1,0 @@
-********** RECEIPT **********
-Order Date: Thu Nov 14 08:48:07 EST 2024
-
-Drink Size: null
-Drink Price: $2.00
-********** TOTAL PRICE **********
-Total: 2.0

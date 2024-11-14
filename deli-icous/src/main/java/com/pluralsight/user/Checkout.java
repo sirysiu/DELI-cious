@@ -26,8 +26,8 @@ public class Checkout {
           System.out.println("\nSandwich:");
           System.out.println("Bread: " + sandwich.getBread());
           System.out.println("Size: " + sandwich.getSize());
-          System.out.println("Meats: " + joinEnumList(sandwich.getMeats()));
-          System.out.println("Cheeses: " + joinEnumList(sandwich.getCheeses()));
+          System.out.println("Meats: " + (sandwich.getMeats().isEmpty() ? "None" : joinEnumList(sandwich.getMeats())));
+          System.out.println("Cheeses: " + (sandwich.getCheeses().isEmpty() ? "None" : joinEnumList(sandwich.getCheeses())));
           System.out.println("Toppings: " + (sandwich.getToppings().isEmpty() ? "None" : joinEnumList(sandwich.getToppings())));
           System.out.println("Sauces: " + (sandwich.getSauces().isEmpty() ? "None" : joinEnumList(sandwich.getSauces())));
           System.out.println("Toasted: " + (sandwich.isToasted() ? "Yes" : "No"));
@@ -36,8 +36,7 @@ public class Checkout {
       Drink drink = order.getDrink();
       if (drink != null) {
           System.out.println("\nDrink:");
-         System.out.println("Drink Type: " + drink.getDrinkType());  // Assuming you have getDrinkType() method in Drink class
-          System.out.println("Drink Size: " + drink.getDrink());  // Assuming Drink has a size
+         System.out.println("Drink Size: " + drink.getDrinkType());  // get the drink data
           System.out.println("Drink Price: $" + String.format("%.2f", drink.getDrinkPrice()));
       }
 

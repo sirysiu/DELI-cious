@@ -1,0 +1,15 @@
+********** RECEIPT **********
+Receipt ID: REC-20241114_120407
+Order Date: Thu Nov 14 12:04:07 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: 
+Cheeses: 
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $4.00
+********** TOTAL PRICE **********
+Total: 4.0

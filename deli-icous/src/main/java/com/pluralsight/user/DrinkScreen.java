@@ -16,12 +16,13 @@ public class DrinkScreen {
         Drink soda = new Drink();
 
 
-        System.out.println("What size drink would you like? SMALL MEDIUM LARGE");
+        System.out.println("What size drink would you like? ");
+        System.out.println("(SMALL MEDIUM LARGE)");
         DrinkSize d = DrinkSize.valueOf(scanner.nextLine().toUpperCase());
         soda.setDrink(d);
 
         order.setDrink(soda);
 
-
+        System.out.println("\nYou have selected a Drink...\n");
     }
 }

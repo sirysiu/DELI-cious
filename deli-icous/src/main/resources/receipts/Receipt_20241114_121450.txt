@@ -1,0 +1,18 @@
+********** RECEIPT **********
+Receipt ID: REC-20241114_121450
+Order Date: Thu Nov 14 12:14:50 EST 2024
+
+Sandwich:
+Size: LARGE
+Bread: WHEAT
+Meats: None
+Cheese: None
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $12.00
+Chip Type: PRINGLES
+Chip Price: $1.50
+
+********** TOTAL PRICE **********
+Total: 13.5

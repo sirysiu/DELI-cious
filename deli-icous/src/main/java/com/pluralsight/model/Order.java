@@ -1,21 +1,13 @@
 package com.pluralsight.model;
 
-import com.pluralsight.model.enums.ChipsType;
 import com.pluralsight.model.enums.DrinkSize;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Order {
     private Sandwich sandwich;
     private Drink drink;
     private Chips chips;
     private DrinkSize drinkSize;
-   // private ChipsType chipsType;
-
-
-
-
 
 
     public Chips getChips() {
@@ -35,16 +27,6 @@ public class Order {
         this.drink = drink;
     }
 
-    public void setDrinkSize(DrinkSize drinkSize) {
-        this.drinkSize = drinkSize;
-    }
-
-
-
-
-//    public void setChipsType(ChipsType chipsType) {
-//        this.chipsType = chipsType;
-//    }
 
     public void setSandwich(Sandwich sandwich) {
         this.sandwich = sandwich;
@@ -53,8 +35,7 @@ public class Order {
     public Order() {
         this.sandwich = sandwich;
         this.drinkSize = drinkSize;
-      //  this.chipsType = chipsType;
-       // this.chips = new ArrayList<>();
+
     }
 
     // Method to calculate total price of the order
@@ -87,10 +68,6 @@ public class Order {
     public DrinkSize getDrinkSize() {
         return drinkSize;
     }
-
-
-
-
 
 
 

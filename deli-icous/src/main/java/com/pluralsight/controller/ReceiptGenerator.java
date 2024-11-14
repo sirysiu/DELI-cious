@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 
 public class ReceiptGenerator {
-    private static final String RECEIPT_DIRECTORY = "/Users/sirisew/pluralsight/DELI-icous/deli-icous/src/main/resources/receipts";
+    private static final String RECEIPT_DIRECTORY = "/Users/sirisew/pluralsight/DELI-icous/deli-icous/src/main/resources/receipts"; // file path to create a receipt
 
     public static void generateReceipt(Order order) {
         File directory = new File(RECEIPT_DIRECTORY);
@@ -28,27 +28,38 @@ public class ReceiptGenerator {
 
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String fileName = "Receipt_" + timeStamp + ".txt";
+        String receiptID = "REC-" + timeStamp;
         File receiptFile = new File(directory, fileName);
 
         try (FileWriter writer = new FileWriter(receiptFile)) {
             writer.write("********** RECEIPT **********\n");
-            writer.write("Order Date: " + new Date() + "\n\n");
+            writer.write("Receipt ID: " + receiptID + "\n");  // Add Receipt ID here
+
+            writer.write("Order Date: " + new Date() + "\n\n"); // create the receipts header with time and id
 
 // Write Sandwich details
-            Sandwich sandwich = order.getSandwich();  // Assuming you have getSandwich() method in Order
+            Sandwich sandwich = order.getSandwich();  //  getSandwich() method in Order
             if (sandwich != null) {
                 writer.write("Sandwich:\n");
                 writer.write("Size: " + sandwich.getSize() + "\n");
                 writer.write("Bread: " + sandwich.getBread() + "\n");
+            }
 
+            if (sandwich.getMeats().isEmpty()) {
+                writer.write("Meats: None\n");
+            } else {
                 writer.write("Meats: " + String.join(", ", sandwich.getMeats().stream()
-                        .map(Meat::name)
+                        .map(Meat::name)// retrieves list of meats use stream to map each name
                         .collect(Collectors.toList())) + "\n");
+            }
 
+            if (sandwich.getMeats().isEmpty()){
+                writer.write("Cheese: None\n");
+            } else {
                 writer.write("Cheeses: " + String.join(", ", sandwich.getCheeses().stream()
                         .map(cheese -> cheese.name())  // Convert each Cheese enum to its name (String)
                         .collect(Collectors.toList())) + "\n");
-
+            }
                 // Write toppings
                 if (sandwich.getToppings().isEmpty()) {
                     writer.write("Toppings: None\n");
@@ -59,17 +70,20 @@ public class ReceiptGenerator {
                 }
 
                 // Write sauces
+            if (sandwich.getSauces().isEmpty()) {
+                writer.write("Sauces: None\n");
+            } else {
                 writer.write("Sauces: " + (sandwich.getSauces().isEmpty() ? "None" : String.join(", ", sandwich.getSauces().stream()
                         .map(Sauces::name)  // Convert Sauces enum to String
                         .collect(Collectors.toList()))) + "\n");
-
+            }
                 // Write whether it's toasted
                 writer.write("Toasted: " + (sandwich.isToasted() ? "Yes" : "No") + "\n");
 
                 writer.write("Sandwich Price: $" + String.format("%.2f", sandwich.getTotalPriceSandwich()) + "\n");
 
 
-            }
+
             Drink drink = order.getDrink();
             if (drink != null) {
                 writer.write("Drink Size: " + drink.getDrinkType() + "\n");

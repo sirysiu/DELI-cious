@@ -5,14 +5,14 @@ import com.pluralsight.model.enums.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Sandwich extends Order {
-    SandwichSize size;
-    List<Toppings> toppings;
-    BreadType bread;
-    List<Meat> meats;
-    List<Cheese> cheeses;
-    List<Sauces> sauces;
-    boolean isToasted;
+public class Sandwich {
+    private SandwichSize size;
+    private List<Toppings> toppings;
+    private BreadType bread;
+    private  List<Meat> meats;
+    private List<Cheese> cheeses;
+    private List<Sauces> sauces;
+    private  boolean isToasted;
 
     public List<Sauces> getSauces() {
         return sauces;
@@ -96,14 +96,4 @@ public class Sandwich extends Order {
     }
 
 
-    @Override
-    public String toString() {
-        return
-                "on " + bread +
-                        " with " + toppings +
-                " " + meats +
-                " " + cheeses +
-                        " and " + isToasted
-                ;
-    }
 }
