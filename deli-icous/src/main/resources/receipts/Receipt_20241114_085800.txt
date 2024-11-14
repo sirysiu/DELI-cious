@@ -1,0 +1,19 @@
+********** RECEIPT **********
+Order Date: Thu Nov 14 08:58:00 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: STEAK, HAM, BACON
+Cheeses: AMERICAN
+Toppings: PEPPERS
+Sauces: MAYO
+Toasted: Yes
+Sandwich Price: $7.75
+Drink Size: SMALL
+Drink Price: $2.00
+Chip Type: LAYS
+Chip Price: $1.50
+
+********** TOTAL PRICE **********
+Total: 11.25

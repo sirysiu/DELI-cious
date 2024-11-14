@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class HomeScreen {
     Scanner scanner = new Scanner(System.in);
     public HomeScreen() {
-        boolean isRunning = true;
-        //while (isRunning) {
             System.out.println("""
                     ╔════════════════════════╗
                     ║          HOME          ║
@@ -18,12 +16,16 @@ public class HomeScreen {
                     """);
             int input = scanner.nextInt();
 
-            if (input == 1) {
-                new OrderScreen();
-            } else {
-                System.out.println("Exiting...");
-              //  isRunning = false;
+            switch (input) {
+                case 1:
+                    new OrderScreen();
+                    break;
+                case 0:
+                    System.out.println("Exiting...");
+                default:
+                    System.out.println("Choose option above");
             }
-      //  }
+
     }
-}
+    }
+

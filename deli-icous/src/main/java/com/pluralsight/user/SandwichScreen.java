@@ -3,15 +3,12 @@ package com.pluralsight.user;
 import com.pluralsight.model.Order;
 import com.pluralsight.model.Sandwich;
 import com.pluralsight.model.enums.*;
-import org.w3c.dom.ls.LSOutput;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class SandwichScreen {
-    static List<Sandwich> sandwichOrderList = new ArrayList<>();
     private Order order;
     public SandwichScreen(Order order) {
         this.order = order;

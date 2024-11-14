@@ -20,10 +20,7 @@ public class DrinkScreen {
         DrinkSize d = DrinkSize.valueOf(scanner.nextLine().toUpperCase());
         soda.setDrink(d);
 
-      //  drink.add(soda);
-
         order.setDrink(soda);
-        //order.setSandwich(sandwichOrder); // Add the sandwich to the order
 
 
     }

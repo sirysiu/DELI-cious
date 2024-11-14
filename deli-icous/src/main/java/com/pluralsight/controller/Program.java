@@ -4,6 +4,6 @@ import com.pluralsight.user.HomeScreen;
 
 public class Program {
     public static void main(String[] args) {
-        new UserInterface();
+        new HomeScreen();
     }
 }

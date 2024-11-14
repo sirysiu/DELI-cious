@@ -72,6 +72,8 @@ public class ReceiptGenerator {
             }
             Drink drink = order.getDrink();
             if (drink != null) {
+                writer.write("Drink Size: " + drink.getDrinkType() + "\n");
+
                 writer.write("Drink Price: $" + String.format("%.2f", drink.getDrinkPrice()) + "\n");
 
             }
@@ -79,48 +81,40 @@ public class ReceiptGenerator {
 
             // Write Chips details
             Chips chips = order.getChips();
-            if (chips !=null) {
-               // writer.write("Chip Type: " + chips.getChipsType() + "\n");
+            if (chips != null) {
+                writer.write("Chip Type: " + chips.getChipsType() + "\n");
                 writer.write("Chip Price: $" + String.format("%.2f", chips.getChipsPrice()) + "\n\n");
 
             }
-//            if (!order.getChips()) {
-//                writer.write("Chips:\n");
-//                for (Chips chip : order.getChips()) {
-//                    writer.write("Chips Type: " + chip.getChipsType() + "\n");
-//                    writer.write("Chips Price: $" + String.format("%.2f", chip.getChipsPrice()) + "\n");
-//                }
-//                writer.write("\n");
-//            }
 
             double totalPrice = calculateTotalPrice(order);
             writer.write("********** TOTAL PRICE **********\n");
-        writer.write("Total: " + totalPrice + "\n");
-
+            writer.write("Total: " + totalPrice + "\n");
 
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-//
+
+
     private static double calculateTotalPrice(Order order) {
         double total = 0.0;
 
-      Sandwich sandwich = order.getSandwich();
-      if(sandwich !=null) {
-          total += sandwich.getTotalPriceSandwich();
-      }
+        Sandwich sandwich = order.getSandwich();
+        if (sandwich != null) {
+            total += sandwich.getTotalPriceSandwich();
+        }
 
         Drink drink = order.getDrink();
-      if(drink != null){
-          total += drink.getDrinkPrice();
-      }
+        if (drink != null) {
+            total += drink.getDrinkPrice();
+        }
 
-      Chips chips = order.getChips();
-      if (chips != null) {
-          total += chips.getChipsPrice();
-      }
+        Chips chips = order.getChips();
+        if (chips != null) {
+            total += chips.getChipsPrice();
+        }
         return total;
 
     }

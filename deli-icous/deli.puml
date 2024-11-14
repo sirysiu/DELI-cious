@@ -1,0 +1,182 @@
+@startuml
+class com.pluralsight.model.Chips {
+~ ChipsType chips
++ ChipsType getChipsType()
++ void setChips(ChipsType)
++ double getChipsPrice()
+}
+
+
+enum com.pluralsight.model.enums.ChipsType {
++  LAYS
++  DORITOS
++  PRINGLES
+- double price
++ double getPrice()
+}
+
+
+class com.pluralsight.user.SandwichScreen {
+- Order order
+}
+
+class com.pluralsight.model.Order {
+- Sandwich sandwich
+- Drink drink
+- Chips chips
+- DrinkSize drinkSize
++ Chips getChips()
++ Drink getDrink()
++ void setChips(Chips)
++ void setDrink(Drink)
++ void setDrinkSize(DrinkSize)
++ void setSandwich(Sandwich)
++ double getOrderTotalPrice()
++ Sandwich getSandwich()
++ DrinkSize getDrinkSize()
+}
+
+
+enum com.pluralsight.model.enums.DrinkSize {
++  SMALL
++  MEDIUM
++  LARGE
+- double price
++ double getPrice()
+}
+
+
+enum com.pluralsight.model.enums.Meat {
++  STEAK
++  HAM
++  SALAMI
++  ROAST_BEEF
++  CHICKEN
++  BACON
+- double price
++ double getPrice()
+}
+
+
+enum com.pluralsight.model.enums.Sauces {
++  MAYO
++  MUSTARD
++  KETCHUP
++  RANCH
++  THOUSAND_ISLANDS
++  VINAIGRETTE
+}
+
+enum com.pluralsight.model.enums.SandwichSize {
++  SMALL
++  MEDIUM
++  LARGE
+- double price
++ double getPrice()
+}
+
+
+class com.pluralsight.controller.Program {
++ {static} void main(String[])
+}
+
+class com.pluralsight.user.ChipScreen {
+~ {static} List<Chips> chips
+}
+
+class com.pluralsight.user.Checkout {
+- Order order
+- void printCheckoutSummary()
+- String joinEnumList(List<? extends Enum<?>>)
+}
+
+
+class com.pluralsight.controller.ReceiptGenerator {
+- {static} String RECEIPT_DIRECTORY
++ {static} void generateReceipt(Order)
+- {static} double calculateTotalPrice(Order)
+}
+
+
+enum com.pluralsight.model.enums.BreadType {
++  WHITE
++  WHEAT
++  RYE
++  WRAP
+}
+
+enum com.pluralsight.model.enums.Cheese {
++  AMERICAN
++  SWISS
++  PROVOLONE
++  CHEDDAR
+- double price
++ double getPrice()
+}
+
+
+enum com.pluralsight.model.enums.Toppings {
++  LETTUCE
++  PEPPERS
++  ONIONS
++  TOMATOES
++  JALAPENO
++  CUCUMBERS
++  PICKLES
++  GUACAMOLE
++  MUSHROOM
+}
+
+class com.pluralsight.user.DrinkScreen {
+~ {static} List<Drink> drink
+}
+
+class com.pluralsight.model.Drink {
+~ DrinkSize drink
++ void setDrink(DrinkSize)
++ DrinkSize getDrinkType()
++ double getDrinkPrice()
+}
+
+
+class com.pluralsight.user.HomeScreen {
+~ Scanner scanner
+}
+
+class com.pluralsight.user.OrderScreen {
+- Order order
+}
+
+class com.pluralsight.model.Sandwich {
+~ SandwichSize size
+~ List<Toppings> toppings
+~ BreadType bread
+~ List<Meat> meats
+~ List<Cheese> cheeses
+~ List<Sauces> sauces
+~ boolean isToasted
++ List<Sauces> getSauces()
++ void setToasted(boolean)
++ double getTotalPriceSandwich()
++ void setSauces(List<Sauces>)
++ boolean isToasted()
++ void setSize(SandwichSize)
++ void setToppings(List<Toppings>)
++ void setBread(BreadType)
++ void addMeat(Meat)
++ void addCheese(Cheese)
++ SandwichSize getSize()
++ List<Toppings> getToppings()
++ BreadType getBread()
++ List<Meat> getMeats()
++ List<Cheese> getCheeses()
++ String toString()
+}
+
+
+
+
+com.pluralsight.model.Order <|-- com.pluralsight.model.Chips
+com.pluralsight.model.Order <|-- com.pluralsight.model.Drink
+com.pluralsight.model.Order <|-- com.pluralsight.model.Sandwich
+@enduml

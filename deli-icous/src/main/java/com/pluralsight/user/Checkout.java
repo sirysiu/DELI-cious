@@ -15,9 +15,6 @@ public class Checkout {
   public Checkout(Order order) {
      this.order = order;
      printCheckoutSummary();
- // SandwichCheckout();
-//    DrinkCheckout();
-//   ChipsCheckout();
       ReceiptGenerator.generateReceipt(order);
 
   }
@@ -39,7 +36,7 @@ public class Checkout {
       Drink drink = order.getDrink();
       if (drink != null) {
           System.out.println("\nDrink:");
-       //   System.out.println("Drink Type: " + drink.getDrinkType());  // Assuming you have getDrinkType() method in Drink class
+         System.out.println("Drink Type: " + drink.getDrinkType());  // Assuming you have getDrinkType() method in Drink class
           System.out.println("Drink Size: " + drink.getDrink());  // Assuming Drink has a size
           System.out.println("Drink Price: $" + String.format("%.2f", drink.getDrinkPrice()));
       }
@@ -63,32 +60,5 @@ public class Checkout {
     }
   }
 
-//  private void ChipsCheckout() {
-//      for (Chips c : ChipScreen.chips){
-//          System.out.println("Chips is: " + c.getChipsPrice());
-//      }
-//  }
-//  private void DrinkCheckout() {
-//    for (Drink d : DrinkScreen.drink) {
-//        System.out.println("Your Drink: " + d.getDrinkPrice());
-//    }
-//  }
-
-//  private void SandwichCheckout() {
-//    for (Sandwich sandwich : SandwichScreen.sandwichOrderList) {
-//
-//      System.out.println("********ORDER SUMMARY************");
-//      System.out.println("Sandwich: ");
-//      System.out.println("Bread: " + sandwich.getBread());
-//      System.out.println("Size: " + sandwich.getSize());
-//      System.out.println("Meats: " + sandwich.getMeats());
-//      System.out.println("Cheeses: " + sandwich.getCheeses());
-//      System.out.println("Toppings: " + sandwich.getToppings());
-//      System.out.println("Sauces: " + sandwich.getSauces());
-//      System.out.println("Toasted: " + (sandwich.isToasted() ? "Yes" : "No"));
-//
-//      System.out.println("Total Price: " + sandwich.getTotalPriceSandwich());
-//    }
-//  }
 
 

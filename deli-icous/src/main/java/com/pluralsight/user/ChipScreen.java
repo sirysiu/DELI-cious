@@ -25,8 +25,7 @@ public class ChipScreen {
 
 
            order.setChips(crisp);
-        // chips.add(crisp);
-       // order.setSandwich(sandwichOrder); // Add the sandwich to the order
+
 
     }
 }

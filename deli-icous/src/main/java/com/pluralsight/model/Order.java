@@ -69,7 +69,7 @@ public class Order {
 
         // Add the price of the drink based on the size
         if (drink != null) {
-            total += drinkSize.getPrice();
+            total += drink.getDrinkPrice();
         }
 
         // Add the price of chips
