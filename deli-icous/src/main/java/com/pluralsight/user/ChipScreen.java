@@ -19,7 +19,7 @@ public class ChipScreen {
             Scanner scanner = new Scanner(System.in);
             Chips crisp = new Chips();
 
-            System.out.println("What Chips would you like?");
+            System.out.println("\nWhat Chips would you like?");
         System.out.println(" (Lays, Doritos, Pringles) ");
         try {
             ChipsType chip = ChipsType.valueOf(scanner.nextLine().toUpperCase());

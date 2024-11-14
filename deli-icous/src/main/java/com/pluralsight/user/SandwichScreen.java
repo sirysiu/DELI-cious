@@ -17,7 +17,7 @@ public class SandwichScreen {
         Sandwich sandwichOrder = new Sandwich();
 
 
-        System.out.println("What size Sandwich would you like?");
+        System.out.println("\nWhat size Sandwich would you like?");
         System.out.println("(SMALL, MEDIUM, LARGE)");
         try {
             SandwichSize size = SandwichSize.valueOf(scanner.nextLine().toUpperCase());
