@@ -16,7 +16,7 @@ public class DrinkScreen {
         Drink soda = new Drink();
 
 
-        System.out.println("What size drink would you like? ");
+        System.out.println("\nWhat size drink would you like? ");
         System.out.println("(SMALL MEDIUM LARGE)");
         try {
             DrinkSize d = DrinkSize.valueOf(scanner.nextLine().toUpperCase());
