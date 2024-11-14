@@ -45,7 +45,7 @@ public class Order {
 
         // Add the price of the sandwich to the total
         if (sandwich != null) {
-            total += sandwich.getTotalPriceSandwich();
+            total += sandwich.getTotalPriceSandwich(sandwich);
         }
 
         // Add the price of the drink based on the size

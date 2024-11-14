@@ -20,7 +20,7 @@ public class Checkout {
   }
 
   private void printCheckoutSummary() {
-      System.out.println("************ ORDER SUMMARY ****************");
+      System.out.println("\n************ ORDER SUMMARY ****************");
       Sandwich sandwich = order.getSandwich();
       if (sandwich != null) {
           System.out.println("\nSandwich:");
@@ -31,7 +31,7 @@ public class Checkout {
           System.out.println("Toppings: " + (sandwich.getToppings().isEmpty() ? "None" : joinEnumList(sandwich.getToppings())));
           System.out.println("Sauces: " + (sandwich.getSauces().isEmpty() ? "None" : joinEnumList(sandwich.getSauces())));
           System.out.println("Toasted: " + (sandwich.isToasted() ? "Yes" : "No"));
-          System.out.println("Sandwich Price: $" + String.format("%.2f", sandwich.getTotalPriceSandwich()));
+          System.out.println("Sandwich Price: $" + String.format("%.2f", sandwich.getTotalPriceSandwich(sandwich)));
       }
       Drink drink = order.getDrink();
       if (drink != null) {

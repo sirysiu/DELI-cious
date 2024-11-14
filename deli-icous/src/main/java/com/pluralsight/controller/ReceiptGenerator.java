@@ -80,7 +80,7 @@ public class ReceiptGenerator {
                 // Write whether it's toasted
                 writer.write("Toasted: " + (sandwich.isToasted() ? "Yes" : "No") + "\n");
 
-                writer.write("Sandwich Price: $" + String.format("%.2f", sandwich.getTotalPriceSandwich()) + "\n");
+                writer.write("Sandwich Price: $" + String.format("%.2f", sandwich.getTotalPriceSandwich(sandwich)) + "\n");
 
 
 
@@ -117,7 +117,7 @@ public class ReceiptGenerator {
 
         Sandwich sandwich = order.getSandwich();
         if (sandwich != null) {
-            total += sandwich.getTotalPriceSandwich();
+            total += sandwich.getTotalPriceSandwich(sandwich);
         }
 
         Drink drink = order.getDrink();

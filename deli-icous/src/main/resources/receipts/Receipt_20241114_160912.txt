@@ -1,0 +1,15 @@
+********** RECEIPT **********
+Receipt ID: REC-20241114_160912
+Order Date: Thu Nov 14 16:09:12 EST 2024
+
+Sandwich:
+Size: LARGE
+Bread: WHITE
+Meats: STEAK, HAM, SALAMI, BACON
+Cheeses: AMERICAN
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $18.25
+********** TOTAL PRICE **********
+Total: 18.25
