@@ -1,0 +1,20 @@
+********** RECEIPT **********
+Receipt ID: REC-20241115_111140
+Order Date: Fri Nov 15 11:11:40 EST 2024
+
+Sandwich:
+Size: LARGE
+Bread: WHITE
+Meats: STEAK, HAM, HAM
+Cheeses: AMERICAN
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $16.75
+Drink Size: LARGE
+Drink Price: $3.00
+Chip Type: LAYS
+Chip Price: $1.50
+
+********** TOTAL PRICE **********
+Total: 21.25

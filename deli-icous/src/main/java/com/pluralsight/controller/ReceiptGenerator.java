@@ -114,7 +114,7 @@ public class ReceiptGenerator {
 
 
     private static double calculateTotalPrice(Order order) {
-        double total = 0.0;
+        double total = 0.0; // get the total overall items
 
         Sandwich sandwich = order.getSandwich();
         if (sandwich != null) {
