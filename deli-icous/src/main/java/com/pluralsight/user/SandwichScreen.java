@@ -3,8 +3,9 @@ package com.pluralsight.user;
 import com.pluralsight.model.Order;
 import com.pluralsight.model.Sandwich;
 import com.pluralsight.model.enums.*;
+import com.pluralsight.styles.ColorCodes;
 
-import java.util.Collections;
+
 
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class SandwichScreen {
 
         System.out.println("\nWhat size Sandwich would you like?");
         System.out.println("(SMALL, MEDIUM, LARGE)");
-        try {
+        try { //try catch statements to handle error if user input incorrectly
             SandwichSize size = SandwichSize.valueOf(scanner.nextLine().toUpperCase());
             sandwichOrder.setSize(size);
         } catch (IllegalArgumentException e) {
@@ -36,7 +37,7 @@ public class SandwichScreen {
         }
 
         System.out.println("\nSelect meats (STEAK, HAM, SALAMI, ROAST_BEEF, CHICKEN, BACON). Type 'done' to stop adding.");
-        System.out.println("*After first Selection it will be EXTRA*");
+        System.out.println(ColorCodes.RED +"*Will be charged EXTRA for Additional Meat*"+ ColorCodes.RESET);
         while (true) {
             String meatChoice = scanner.nextLine().toUpperCase();
             if (meatChoice.equals("DONE")) break;
@@ -49,7 +50,7 @@ public class SandwichScreen {
         }
 
         System.out.println("\nSelect cheese (AMERICAN, PROVOLONE, CHEDDAR, SWISS). Type 'done' to stop adding.");
-        System.out.println("*After first Selection it will be EXTRA*");
+        System.out.println(ColorCodes.RED +"*Will be charged EXTRA for Additional Cheese*"+ ColorCodes.RESET);
         while (true) {
             String cheeseChoice = scanner.nextLine().toUpperCase();
             if (cheeseChoice.equals("DONE")) break;

@@ -26,6 +26,7 @@ public class ReceiptGenerator {
             directory.mkdirs(); // Create the directory if it doesn't exist
         }
 
+        //create the file right here
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String fileName = "Receipt_" + timeStamp + ".txt";
         String receiptID = "REC-" + timeStamp;
@@ -132,4 +133,6 @@ public class ReceiptGenerator {
         return total;
 
     }
+
+
 }

@@ -1,0 +1,15 @@
+********** RECEIPT **********
+Receipt ID: REC-20241114_213515
+Order Date: Thu Nov 14 21:35:15 EST 2024
+
+Sandwich:
+Size: LARGE
+Bread: RYE
+Meats: STEAK
+Cheeses: AMERICAN
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $13.75
+********** TOTAL PRICE **********
+Total: 13.75
