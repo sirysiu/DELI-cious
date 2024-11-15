@@ -36,6 +36,7 @@ public class SandwichScreen {
         }
 
         System.out.println("\nSelect meats (STEAK, HAM, SALAMI, ROAST_BEEF, CHICKEN, BACON). Type 'done' to stop adding.");
+        System.out.println("*After first Selection it will be EXTRA*");
         while (true) {
             String meatChoice = scanner.nextLine().toUpperCase();
             if (meatChoice.equals("DONE")) break;
@@ -48,6 +49,7 @@ public class SandwichScreen {
         }
 
         System.out.println("\nSelect cheese (AMERICAN, PROVOLONE, CHEDDAR, SWISS). Type 'done' to stop adding.");
+        System.out.println("*After first Selection it will be EXTRA*");
         while (true) {
             String cheeseChoice = scanner.nextLine().toUpperCase();
             if (cheeseChoice.equals("DONE")) break;
