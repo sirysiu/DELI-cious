@@ -1,0 +1,15 @@
+********** RECEIPT **********
+Receipt ID: REC-20241117_231712
+Order Date: Sun Nov 17 23:17:12 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: STEAK, HAM, STEAK
+Cheeses: 
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $7.50
+********** TOTAL PRICE **********
+Total: 7.5

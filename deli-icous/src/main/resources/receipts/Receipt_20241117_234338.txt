@@ -1,0 +1,15 @@
+********** RECEIPT **********
+Receipt ID: REC-20241117_234338
+Order Date: Sun Nov 17 23:43:38 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: STEAK
+Cheeses: AMERICAN, PROVOLONE, CHEDDAR, SWISS, AMERICAN
+Toppings: None
+Sauces: None
+Toasted: Yes
+Sandwich Price: $8.45
+********** TOTAL PRICE **********
+Total: 8.450000000000001
