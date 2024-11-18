@@ -1,0 +1,20 @@
+********** RECEIPT **********
+Receipt ID: REC-20241118_003327
+Order Date: Mon Nov 18 00:33:27 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: None
+Cheese: None
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $5.50
+Drink Size: LARGE
+Drink Price: $3.00
+Chip Type: LAYS
+Chip Price: $1.50
+
+********** TOTAL PRICE **********
+Total: 10.0

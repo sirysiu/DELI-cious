@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ChipScreen {
+    private Order order;
 
-    static List<Chips> chips = new ArrayList<>();
 
 
     public ChipScreen(Order order) {
@@ -31,6 +31,6 @@ public class ChipScreen {
 
            order.setChips(crisp);
 
-        System.out.println("\nYou have selected a chip..\n");
+        System.out.println("\nYou have selected a chip...\n");
     }
 }

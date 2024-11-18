@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DrinkScreen {
-     static List<Drink> drink = new ArrayList<>();
+    private Order order;
+
+    static List<Drink> drink = new ArrayList<>();
 
     public DrinkScreen(Order order) {
         Scanner scanner = new Scanner(System.in);
