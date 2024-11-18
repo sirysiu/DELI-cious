@@ -1,0 +1,15 @@
+********** RECEIPT **********
+Receipt ID: REC-20241118_000214
+Order Date: Mon Nov 18 00:02:14 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: STEAK, HAM, SALAMI, ROAST_BEEF, CHICKEN, BACON
+Cheeses: AMERICAN, PROVOLONE, CHEDDAR, SWISS, AMERICAN, PROVOLONE, CHEDDAR, SWISS, AMERICAN, PROVOLONE, CHEDDAR, SWISS
+Toppings: None
+Sauces: None
+Toasted: No
+Sandwich Price: $13.05
+********** TOTAL PRICE **********
+Total: 13.050000000000008

@@ -1,0 +1,15 @@
+********** RECEIPT **********
+Receipt ID: REC-20241117_235627
+Order Date: Sun Nov 17 23:56:27 EST 2024
+
+Sandwich:
+Size: SMALL
+Bread: WHITE
+Meats: STEAK, STEAK
+Cheeses: AMERICAN
+Toppings: LETTUCE, PEPPERS, ONIONS
+Sauces: MAYO
+Toasted: No
+Sandwich Price: $7.75
+********** TOTAL PRICE **********
+Total: 7.75
